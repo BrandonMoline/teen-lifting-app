@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teen Lifting Tracker</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="headerRow">
+      <div>
+        <h1>Teen Lifting Tracker</h1>
+        <p class="subtitle">Football • Golf • Hockey (Wrist-friendly, off-season)</p>
+      </div>
+      <div class="profileBadge" id="profileBadge" title="Player profile">
+        <div class="badgeName" id="badgeName">Player</div>
+        <div class="badgeMeta" id="badgeMeta">Off-season</div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-day="day1">Day 1</button>
+    <button class="tab" data-day="day2">Day 2</button>
+    <button class="tab" data-day="day3">Day 3</button>
+    <button class="tab" data-day="profile">Profile</button>
+    <button class="tab" data-day="history">History</button>
+  </nav>
+
+  <main id="view"></main>
+
+  <footer>
+    <button id="saveWorkout" class="primary">Save Workout</button>
+    <button id="resetDay" class="ghost">Reset Day</button>
+  </footer>
+
+  <!-- Video modal -->
+  <div id="videoModal" class="modal hidden" aria-hidden="true">
+    <div class="modalBackdrop" id="videoClose"></div>
+    <div class="modalCard">
+      <div class="modalHeader">
+        <div>
+          <div class="modalTitle" id="videoTitle">Video</div>
+          <div class="small" id="videoHint">Form first. Stop if wrist pain.</div>
+        </div>
+        <button class="closeBtn" id="videoCloseBtn" aria-label="Close">✕</button>
+      </div>
+      <div class="videoWrap">
+        <iframe
+          id="videoFrame"
+          title="Exercise tutorial video"
+          src=""
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="small">Tip: Watch once → do a light warm-up set → then start working sets.</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
