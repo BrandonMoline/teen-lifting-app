@@ -1,2 +1,2 @@
-# teen-lifting-app
-lifting app for teen (limited wrist)
+# Nick Work out app
+lifting for Nick(limited wrist)
